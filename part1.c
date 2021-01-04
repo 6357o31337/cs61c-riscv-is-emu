@@ -236,6 +236,7 @@ void print_ecall(Instruction instruction) {
 
 void print_rtype(char *name, Instruction instruction) {
     /* YOUR CODE HERE */
+    printf("%s\tx%d,\tx%d,\tx%d\n", name, instruction.rtype.rd, instruction.rtype.rs1, instruction.rtype.rs2);
 }
 
 void print_itype_except_load(char *name, Instruction instruction, int imm) {

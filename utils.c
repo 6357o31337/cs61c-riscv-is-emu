@@ -14,6 +14,10 @@ int sign_extend_number( unsigned int field, unsigned int n) {
 Instruction parse_instruction(uint32_t instruction_bits) {
     /* YOUR CODE HERE */
     Instruction instruction;
+
+    // myCode
+    instruction.bits = instruction_bits;
+
     return instruction;
 }
 
