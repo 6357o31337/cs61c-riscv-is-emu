@@ -224,6 +224,8 @@ void write_branch(Instruction instruction) {
 
 void print_lui(Instruction instruction) {
     /* YOUR CODE HERE */
+    // printf("lui\tx%d,\t%d\n", instruction.utype.rd, instruction.utype.imm);
+    printf("lui\tx%d, %d\n", instruction.utype.rd, instruction.utype.imm);
 }
 
 void print_jal(Instruction instruction) {
@@ -232,19 +234,24 @@ void print_jal(Instruction instruction) {
 
 void print_ecall(Instruction instruction) {
     /* YOUR CODE HERE */
+    printf("ecall\n");
 }
 
 void print_rtype(char *name, Instruction instruction) {
     /* YOUR CODE HERE */
-    printf("%s\tx%d,\tx%d,\tx%d\n", name, instruction.rtype.rd, instruction.rtype.rs1, instruction.rtype.rs2);
+    // printf("%s\tx%d,\tx%d,\tx%d\n", name, instruction.rtype.rd, instruction.rtype.rs1, instruction.rtype.rs2);
+    printf("%s\tx%d, x%d, x%d\n", name, instruction.rtype.rd, instruction.rtype.rs1, instruction.rtype.rs2);
 }
 
 void print_itype_except_load(char *name, Instruction instruction, int imm) {
     /* YOUR CODE HERE */
+    // printf("%s\tx%d,\tx%d,\t%d\n", name, instruction.itype.rd, instruction.itype.rs1, imm);
+    printf("%s\tx%d, x%d, %d\n", name, instruction.itype.rd, instruction.itype.rs1, imm);
 }
 
 void print_load(char *name, Instruction instruction) {
     /* YOUR CODE HERE */
+    // printf("%s\t
 }
 
 void print_store(char *name, Instruction instruction) {
